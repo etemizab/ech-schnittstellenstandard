@@ -1,1 +1,14 @@
-
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/person/nameData.json",
+  "title": "nameData",
+  "type": "object",
+  "properties": {
+    "officialName": { "type": "string", "minLength": 1 },
+    "firstName":    { "type": "string", "minLength": 1 },
+    "originalName": { "type": "string" },
+    "callName":     { "type": "string" }
+  },
+  "required": ["officialName", "firstName"],
+  "additionalProperties": false
+}
