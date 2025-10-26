@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/person/person.json",
+  "title": "person",
+  "type": "object",
+  "properties": {
+    "personIdentification": { "$ref": "https://example.org/schemas/shared/identifiers.json" },
+    "nameData":    { "$ref": "https://example.org/schemas/person/nameData.json" },
+    "birthData":   { "$ref": "https://example.org/schemas/person/birthData.json" },
+    "religionData": { "type": "object", "properties": {
+        "religion": { "type": "integer" },
+        "validFrom": { "type": "string", "format": "date" }
+      }, "required": ["religion"], "additionalProperties": false
+    },
+    "maritalData": { "type": "object" },
+    "nationalityData": { "$ref": "https://example.org/schemas/person/nationalityData.json" },
+    "deathData": { "type": "object" },
+    "contactData": { "type": "object" },
+    "languageOfCorrespondence": { "type": "string", "minLength": 2 },
+    "placeOfOrigin": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "originName": { "type": "string" },
+          "canton": { "type": "string", "minLength": 2 }
+        },
+        "required": ["originName","canton"],
+        "additionalProperties": false
+      }
+    },
+    "residence": { "$ref": "https://example.org/schemas/residence/residenceData.json" }
+  },
+  "required": ["personIdentification", "nameData", "birthData", "religionData", "maritalData", "nationalityData", "residence"],
+  "additionalProperties": false
+}
