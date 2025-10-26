@@ -1,1 +1,24 @@
-
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/schemas/person/birthData.json",
+  "title": "birthData",
+  "type": "object",
+  "properties": {
+    "dateOfBirth": {
+      "type": "string",
+      "pattern": "^[0-9]{4}(-[0-9]{2}(-[0-9]{2})?)?$"
+    },
+    "placeOfBirth": {
+      "type": "object",
+      "properties": {
+        "country": { "type": "string", "minLength": 2 },
+        "municipalityId": { "type": "string" },
+        "municipalityName": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "sex": { "type": "integer", "enum": [1,2,3] }
+  },
+  "required": ["dateOfBirth", "placeOfBirth", "sex"],
+  "additionalProperties": false
+}
