@@ -1,0 +1,8 @@
+name: Question
+description: Frage zum Standard
+labels: ["question"]
+body:
+  - type: textarea
+    id: q
+    attributes:
+      label: Frage
