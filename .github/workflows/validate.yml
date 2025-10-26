@@ -1,0 +1,23 @@
+name: Validate Schemas & OpenAPI
+on:
+  pull_request:
+    paths: ["schemas/**","openapi/**"]
+  push:
+    branches: ["main"]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - run: npm i -g @redocly/cli swagger-cli ajv-cli
+      - name: Validate OpenAPI
+        run: |
+          swagger-cli validate openapi/*.yaml
+          npx @redocly/cli lint openapi/*.yaml || true
+      - name: Compile JSON Schemas
+        run: |
+          for f in $(find schemas -name '*.json'); do
+            npx ajv compile -s "$f";
+          done
