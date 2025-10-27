@@ -14,37 +14,40 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # --- 1. Repository auschecken ---
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # --- 2. Node.js installieren ---
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
+      # --- 3. CLI-Tools installieren ---
       - name: Install CLI tools
         run: |
           npm install -g @redocly/cli swagger-cli ajv-cli ajv-formats
 
+      # --- 4. OpenAPI validieren ---
       - name: Validate OpenAPI (swagger-cli + redocly)
         run: |
           echo "🔍 Validating OpenAPI specifications..."
           swagger-cli validate openapi/*.yaml
-          # Linter gibt Best-Practice-Hinweise, blockiert aber nicht den Build
+          # Linter gibt Best-Practice-Hinweise, blockiert aber nicht
           npx @redocly/cli lint openapi/*.yaml || true
 
+      # --- 5. JSON-Schemas prüfen ---
       - name: Compile JSON Schemas (draft 2020-12)
         shell: bash
         run: |
           echo "🔍 Validating JSON Schemas..."
-          SCHEMAS=($(find schemas -name '*.json' -type f))
-          for f in "${SCHEMAS[@]}"; do
+          SCHEMAS=$(find schemas -name '*.json' -type f)
+          for f in $SCHEMAS; do
             echo "→ Checking $f"
-            npx ajv compile --spec=draft2020 -c ajv-formats -r "${SCHEMAS[@]}" -s "$f"
+            npx ajv compile --spec=draft2020 -c ajv-formats -s "$f"
           done
 
+      # --- 6. Zusammenfassung ---
       - name: Summary
         run: echo "✅ OpenAPI and JSON Schema validation finished successfully."
-          for f in $(find schemas -name '*.json' -type f); do
-            npx ajv compile --spec=draft2020 -c ajv-formats -r $REF_LIST -s "$f";
-          done
