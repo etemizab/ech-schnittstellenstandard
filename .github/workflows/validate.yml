@@ -1,33 +1,50 @@
 name: Validate Schemas & OpenAPI
+
 on:
   pull_request:
-    paths: ["schemas/**","openapi/**"]
+    paths:
+      - "schemas/**"
+      - "openapi/**"
   push:
-    branches: ["main"]
+    branches:
+      - main
 
 jobs:
   validate:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: Install CLI tools
-        run: npm i -g @redocly/cli swagger-cli ajv-cli ajv-formats
-
-      - name: Validate OpenAPI
         run: |
+          npm install -g @redocly/cli swagger-cli ajv-cli ajv-formats
+
+      - name: Validate OpenAPI (swagger-cli + redocly)
+        run: |
+          echo "🔍 Validating OpenAPI specifications..."
           swagger-cli validate openapi/*.yaml
-          # Lint als Hinweis (nicht blocking); entferne "|| true", wenn es blocken soll
+          # Linter gibt Best-Practice-Hinweise, blockiert aber nicht den Build
           npx @redocly/cli lint openapi/*.yaml || true
 
       - name: Compile JSON Schemas (draft 2020-12)
         shell: bash
         run: |
-          # alle Schemas als Refs vorladen (damit relative $ref aufgelöst werden)
-          REF_LIST="$(find schemas -name '*.json' -type f -print0 | xargs -0 echo)"
+          echo "🔍 Validating JSON Schemas..."
+          SCHEMAS=($(find schemas -name '*.json' -type f))
+          for f in "${SCHEMAS[@]}"; do
+            echo "→ Checking $f"
+            npx ajv compile --spec=draft2020 -c ajv-formats -r "${SCHEMAS[@]}" -s "$f"
+          done
+
+      - name: Summary
+        run: echo "✅ OpenAPI and JSON Schema validation finished successfully."
           for f in $(find schemas -name '*.json' -type f); do
             npx ajv compile --spec=draft2020 -c ajv-formats -r $REF_LIST -s "$f";
           done
