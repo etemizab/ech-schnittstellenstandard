@@ -14,39 +14,88 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # --- 1. Repository auschecken ---
+      # 1) Repo auschecken
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # --- 2. Node.js installieren ---
+      # 2) Node.js einrichten
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
-      # --- 3. CLI-Tools installieren ---
+      # 3) CLI-Tools installieren
       - name: Install CLI tools
         run: |
           npm install -g @redocly/cli swagger-cli ajv-cli ajv-formats
 
-      # --- 4. OpenAPI validieren ---
+      # 4) OpenAPI validieren & linten
       - name: Validate OpenAPI (swagger-cli + redocly)
         run: |
           echo "🔍 Validating OpenAPI specifications..."
           swagger-cli validate openapi/*.yaml
-          # Linter gibt Best-Practice-Hinweise, blockiert aber nicht
+          # Lint gibt Best-Practice-Hinweise, blockiert aber nicht
           npx @redocly/cli lint openapi/*.yaml || true
 
-      # --- 5. JSON-Schemas prüfen ---
-      - name: Compile JSON Schemas (draft 2020-12)
+      # 5) JSON Schemas: compile für Dateien ohne $ref
+      - name: Compile JSON Schemas without $ref (draft 2020-12)
         shell: bash
         run: |
-          echo "🔍 Validating JSON Schemas..."
-          SCHEMAS=$(find schemas -name '*.json' -type f)
-          for f in $SCHEMAS; do
-            echo "→ Checking $f"
-            npx ajv compile --spec=draft2020 -c ajv-formats -s "$f"
+          echo "🔍 Compiling JSON Schemas without $ref..."
+          NOREF_SCHEMAS=$(grep -L '"\$ref"' -R schemas --include '*.json' || true)
+          for f in $NOREF_SCHEMAS; do
+            if [ -f "$f" ]; then
+              echo "→ ajv compile $f"
+              npx ajv compile --spec=draft2020 -c ajv-formats -s "$f"
+            fi
           done
+
+      # 6) JSON Schemas: validate für Dateien mit $ref (lädt Refs via -r)
+      - name: Validate JSON Schemas with $ref (draft 2020-12)
+        shell: bash
+        run: |
+          echo "🔍 Validating JSON Schemas with $ref..."
+
+          # Minimal gültiges Beispiel passend zu person.json (bei Bedarf anpassen/erweitern)
+          cat > /tmp/person-min.json <<'JSON'
+          {
+            "personIdentification": { "ahvNumber": "1234567890123", "localId": "abc" },
+            "nameData": { "officialName": "Muster", "firstName": "Max" },
+            "birthData": {
+              "dateOfBirth": "1990-01-01",
+              "placeOfBirth": { "country": "CH", "municipalityName": "Bern" },
+              "sex": 1
+            },
+            "religionData": { "religion": 0 },
+            "nationalityData": {
+              "status": 2,
+              "countries": [ { "country": "CH", "validFrom": "1990-01-01" } ]
+            },
+            "residence": {
+              "reportingMunicipality": { "municipalityName": "Bern", "cantonAbbreviation": "BE" },
+              "typeOfResidence": 1,
+              "arrivalDate": "2020-01-01",
+              "dwellingAddress": { "typeOfHousehold": 1, "validFrom": "2020-01-01" }
+            }
+          }
+          JSON
+
+          # Alle Schemas als mögliche Refs einsammeln
+          REFS=$(find schemas -name '*.json' -type f -print0 | xargs -0 echo)
+
+          # Alle Schemas mit $ref validieren (nutzt -r zum Laden der referenzierten Dateien)
+          REF_SCHEMAS=$(grep -l '"\$ref"' -R schemas --include '*.json' || true)
+          for f in $REF_SCHEMAS; do
+            echo "→ ajv validate (with refs) $f"
+            # Standardmäßig Beispiel für person.json verwenden; wenn du weitere Top-Level-Schemas hast,
+            # kannst du hier je nach $f andere Beispiel-Dateien wählen.
+            npx ajv validate --spec=draft2020 -c ajv-formats -s "$f" -r $REFS -d /tmp/person-min.json >/dev/null || \
+            (echo "❌ Example may not fit $f — adjust /tmp/*.json accordingly" && exit 1)
+          done
+
+      # 7) Zusammenfassung
+      - name: Summary
+        run: echo "✅ OpenAPI and JSON Schema validation finished."
 
       # --- 6. Zusammenfassung ---
       - name: Summary
