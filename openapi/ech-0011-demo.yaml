@@ -1,9 +1,11 @@
-openapi: 3.0.3
+ openapi: 3.1.0
+jsonSchemaDialect: https://json-schema.org/draft/2020-12/schema
 info:
   title: eCH-0011 Personendaten – Demo API
   version: 0.1.0
 servers:
   - url: https://api.example.org/v1
+
 paths:
   /persons:
     get:
@@ -16,7 +18,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: "../schemas/person/person.json"
+                  $ref: "#/components/schemas/Person"
   /persons/{id}:
     get:
       summary: Person nach ID (Demo)
@@ -31,4 +33,10 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "../schemas/person/person.json"
+                $ref: "#/components/schemas/Person"
+
+components:
+  schemas:
+    Person:
+      # Referenziert dein JSON Schema (mit $schema/$id etc. – in OAS 3.1 erlaubt)
+      $ref: ../schemas/person/person.json
