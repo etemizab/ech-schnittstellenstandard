@@ -1,6 +1,5 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.org/schemas/person/person.json",
   "title": "person",
   "type": "object",
   "properties": {
