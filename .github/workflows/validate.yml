@@ -50,7 +50,7 @@ jobs:
             fi
           done
 
-      # 6️⃣ JSON-Schemas mit $ref validieren (lädt Referenzen einzeln)
+      # 6️⃣ JSON-Schemas mit $ref validieren (absolute Referenzen mit realpath)
       - name: Validate JSON Schemas with $ref (draft 2020-12)
         shell: bash
         run: |
@@ -80,7 +80,7 @@ jobs:
           }
           JSON
 
-          # Alle Schema-Dateien sammeln
+          # Alle Schemas sammeln (absolute Pfade)
           SCHEMA_FILES=($(find schemas -name '*.json' -type f))
 
           # Alle Schemas mit $ref finden
@@ -88,14 +88,17 @@ jobs:
           for f in $REF_SCHEMAS; do
             echo "→ ajv validate (with refs) $f"
 
-            # -r Parameter korrekt zusammensetzen
+            # -r Parameter mit absoluten Pfaden aufbauen
             REF_ARGS=""
-            for ref in "${SCHEMA_FILES[@]}"; do
-              REF_ARGS="$REF_ARGS -r $ref"
-            done
+            while IFS= read -r ref; do
+              ABS_PATH="$(realpath "$ref")"
+              REF_ARGS="$REF_ARGS -r $ABS_PATH"
+            done < <(find schemas -name '*.json' -type f)
 
-            # Validierung mit allen Referenzen
-            npx ajv validate --spec=draft2020 -c ajv-formats -s "$f" $REF_ARGS -d /tmp/person-min.json >/dev/null || \
+            ABS_SCHEMA_PATH="$(realpath "$f")"
+
+            # Validierung ausführen
+            npx ajv validate --spec=draft2020 -c ajv-formats -s "$ABS_SCHEMA_PATH" $REF_ARGS -d /tmp/person-min.json >/dev/null || \
             (echo "❌ Example may not fit $f — adjust /tmp/*.json accordingly" && exit 1)
           done
 
