@@ -4,20 +4,30 @@ on:
     paths: ["schemas/**","openapi/**"]
   push:
     branches: ["main"]
+
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: { node-version: '20' }
-      - run: npm i -g @redocly/cli swagger-cli ajv-cli
+        with:
+          node-version: '20'
+
+      - name: Install CLI tools
+        run: npm i -g @redocly/cli swagger-cli ajv-cli ajv-formats
+
       - name: Validate OpenAPI
         run: |
           swagger-cli validate openapi/*.yaml
+          # Lint als Hinweis (nicht blocking); entferne "|| true", wenn es blocken soll
           npx @redocly/cli lint openapi/*.yaml || true
-      - name: Compile JSON Schemas
+
+      - name: Compile JSON Schemas (draft 2020-12)
+        shell: bash
         run: |
-          for f in $(find schemas -name '*.json'); do
-            npx ajv compile -s "$f";
+          # alle Schemas als Refs vorladen (damit relative $ref aufgelöst werden)
+          REF_LIST="$(find schemas -name '*.json' -type f -print0 | xargs -0 echo)"
+          for f in $(find schemas -name '*.json' -type f); do
+            npx ajv compile --spec=draft2020 -c ajv-formats -r $REF_LIST -s "$f";
           done
