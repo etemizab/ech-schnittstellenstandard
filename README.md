@@ -1,10 +1,10 @@
 # eCH-schnittstellenstandard, Personendaten-Standard
 
 ## 1 Einleitung
-- 1.1 Status
-- 1.2 Anwendungsgebiet
-- 1.3 Abgrenzung
-- 1.4 Konventionen
+- 1.1 Status(#1-1-status)
+- 1.2 Anwendungsgebiet(#1-2-Anwendungsgebiet)
+- 1.3 Abgrenzung(#1-3-Abgrenzung)
+- 1.4 Konventionen(#1-4-Konventionen)
 
 ## 2 Datenmodell
 
@@ -58,14 +58,14 @@ Alle Versionen: [v1.0.0](README.md)
 
 ---
 
-<a id="1.2-Anwendungszweck"></a>
-### 1.2 Anwendungszweck · Version: ![v1.0.0](https://img.shields.io/badge/version-1.0.0-blue)
+<a id="1.2-Anwendungsgebiet"></a>
+### 1.2 Anwendungsgebiet · Version: ![v1.0.0](https://img.shields.io/badge/version-1.0.0-blue)
 
-Der vorliegende Standard – am Beispiel von **eCH-0011 Datenstandard Personendaten** – definiert zusammen mit den Datenstandards eCH-0044 (Personenidentifikation) und eCH-0045 (Stimm- und Wahlrecht) das Format und die erlaubten Werte zum elektronischen Austausch von Personen-, Aufenthalts- und Niederlassungsinformationen zwischen den Behörden der Schweiz[34]. Die Schnittstelle basiert auf dem **Registerharmonisierungsgesetz (RHG)** und dem darin definierten Amtlichen Katalog der Merkmale.
+Der vorliegende Standard – am Beispiel von **eCH-0011 Datenstandard Personendaten** – definiert zusammen mit den Datenstandards eCH-0044 (Personenidentifikation) und eCH-0045 (Stimm- und Wahlrecht) das Format und die erlaubten Werte zum elektronischen Austausch von Personen-, Aufenthalts- und Niederlassungsinformationen zwischen den Behörden der Schweiz. Die Schnittstelle basiert auf dem **Registerharmonisierungsgesetz (RHG)** und dem darin definierten Amtlichen Katalog der Merkmale.
 
 ### Zweck der Schnittstelle
 
-Die eCH-0011 Schnittstelle ermöglicht es Behörden, Personendaten elektronisch, korrekt und medienbruchfrei auszutauschen. Dabei wird eine **einheitliche, schweizweit eindeutige Personenidentifikation** gewährleistet, deren Kern die AHV-Versichertennummer bildet[34]. Dies ist essentiell für eine koordinierte und effiziente Verwaltung von Personenregistern über Kantons- und Gemeindegrenzen hinweg.
+Die eCH-0011 Schnittstelle ermöglicht es Behörden, Personendaten elektronisch, korrekt und medienbruchfrei auszutauschen. Dabei wird eine **einheitliche, schweizweit eindeutige Personenidentifikation** gewährleistet, deren Kern die AHV-Versichertennummer bildet. Dies ist essentiell für eine koordinierte und effiziente Verwaltung von Personenregistern über Kantons- und Gemeindegrenzen hinweg.
 
 ### Konkrete Anwendungsfälle
 
@@ -167,12 +167,12 @@ Ein Merkmal, das im **Amtlichen Katalog der Merkmale (KAT)** als "*obligatorisch
 
 - **Major Changes**: Wesentliche Änderungen der Struktur oder Semantik (z.B. Version 8.x → 9.x)
 - **Minor Changes**: Kleine ergänzende Änderungen, z.B. neue optionale Elemente
-- Die aktuelle Version ist **9.0.0** (Stand April 2022)[34]
+- Die aktuelle Version ist **9.0.0** (Stand April 2022)
 - Jede Version wird mit einem eigenen XSD-Schema bereitgestellt (z.B. eCH-0011-9-0.xsd)
 
 **1.4.5 UML-Datenmodell**
 
-Das Datenmodell wird in **UML-Notation** beschrieben und zeigt die definierten Klassen und ihre logischen Abhängigkeiten[37][45]. Das Modell bildet einen **Zustand zu einem bestimmten Zeitpunkt** ab – nicht die historischen Änderungen von Daten.
+Das Datenmodell wird in **UML-Notation** beschrieben und zeigt die definierten Klassen und ihre logischen Abhängigkeiten. Das Modell bildet einen **Zustand zu einem bestimmten Zeitpunkt** ab – nicht die historischen Änderungen von Daten.
 
 **1.4.6 Referenzierte Standards**
 
