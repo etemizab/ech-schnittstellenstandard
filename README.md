@@ -43,8 +43,9 @@
 - Tabellenverzeichnis
   
 ---
-<a id="1-einleitung"></a>
+<a id="1-Einleitung"></a>
 ## 1. Einleitung · Version: ![v1.0.0](https://img.shields.io/badge/version-1.0.0-blue)
+<a id="1-1-Status"></a>
 ### 1.1 Status · Version: ![v1.0.0](https://img.shields.io/badge/version-1.0.0-blue)
 
 **In Entwicklung:** Das vorliegende Repository befindet sich in der initialen Entwicklungsphase im Rahmen eines Integrationsseminars Data Science an der ZHAW School of Management and Law. Dieses Projekt wird in Kooperation mit dem Verein eCH durchgeführt und dient der prototypischen Umsetzung eines ausgewählten Schnittstellenstandards auf GitHub. Ziel ist die Transformation statischer PDF-Spezifikationen in eine modulare, versionierte und kollaborativ weiterentwickelbare Struktur.
@@ -58,7 +59,7 @@ Alle Versionen: [v1.0.0](README.md)
 
 ---
 
-<a id="1.2-Anwendungsgebiet"></a>
+<a id="1-2-Anwendungsgebiet"></a>
 ### 1.2 Anwendungsgebiet · Version: ![v1.0.0](https://img.shields.io/badge/version-1.0.0-blue)
 
 Der vorliegende Standard – am Beispiel von **eCH-0011 Datenstandard Personendaten** – definiert zusammen mit den Datenstandards eCH-0044 (Personenidentifikation) und eCH-0045 (Stimm- und Wahlrecht) das Format und die erlaubten Werte zum elektronischen Austausch von Personen-, Aufenthalts- und Niederlassungsinformationen zwischen den Behörden der Schweiz. Die Schnittstelle basiert auf dem **Registerharmonisierungsgesetz (RHG)** und dem darin definierten Amtlichen Katalog der Merkmale.
@@ -106,7 +107,7 @@ Alle Versionen: [v1.0.0](README.md)
 
 ---
 
-<a id="1.3-Abgrenzung"></a>
+<a id="1-3-Abgrenzung"></a>
 ### 1.3 Abgrenzung · Version: ![v1.0.0](https://img.shields.io/badge/version-1.0.0-blue)
 
 Der vorliegende Standard beschränkt sich darauf, **Datenformate und Strukturen zu definieren**. Das vollständige Austauschformat für konkrete Schnittstellen wird durch eigenständige Standards bzw. konkrete Umsetzungsprojekte bestimmt. Es bleibt diesen Standards überlassen, aus den in eCH-0011 definierten Datenmodellen die vollständigen Austauschformate für konkrete Anwendungsfälle abzuleiten.
@@ -136,7 +137,7 @@ Alle Versionen: [v1.0.0](README.md)
 **Feedback**: [Ankündigungen von eCH](https://github.com/etemizab/ech-schnittstellenstandard/discussions/categories/announcements) ·  [Fehler melden](https://github.com/etemizab/ech-schnittstellenstandard/discussions/categories/q-a) · [Verbesserung vorschlagen](https://github.com/etemizab/ech-schnittstellenstandard/discussions/categories/ideas) · [Alle Diskussionen](https://github.com/etemizab/ech-schnittstellenstandard/discussions)
 
 ---
-<a id="1.4-Konventionen"></a>
+<a id="1-4-Konventionen"></a>
 ### 1.4 Konventionen · Version: ![v1.0.0](https://img.shields.io/badge/version-1.0.0-blue)
 
 Die folgenden Konventionen regeln die **Notation, Formatierung und Referenzierung** in diesem Standard:
