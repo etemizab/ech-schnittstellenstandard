@@ -1,9 +1,0 @@
-name: Bug
-description: Fehler im Standard/Schema melden
-labels: ["bug"]
-body:
-  - type: textarea
-    id: desc
-    attributes:
-      label: Beschreibung
-      description: Was ist falsch/fehlt?
