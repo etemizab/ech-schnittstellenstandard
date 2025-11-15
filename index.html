@@ -2,152 +2,235 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
+  <title>eCH-0011 Schnittstellenstandard Personendaten</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>eCH-0011 Schnittstellenstandard (Personendaten)</title>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'IBM Plex Sans', Arial, sans-serif;
       margin: 0;
-      background: #f5f7fa;
-      color: #272c34;
+      background: #f4f8fb;
+      color: #202b36;
     }
-    header {
-      background: #1d6fa5;
+    .navbar {
+      background: #19558a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+      height: 65px;
       color: #fff;
-      padding: 2rem 0 1.2rem 0;
-      text-align: center;
-      border-bottom: 4px solid #16608a;
+      border-bottom: 4px solid #1566b0;
     }
-    header h1 {
-      margin: 0 0 0.4rem 0;
-      font-size: 2.6rem;
-      font-weight: 700;
-      letter-spacing: 0.01em;
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.6rem;
+      letter-spacing: 1.5px;
     }
-    header p {
-      margin: 0;
-      font-size: 1.2rem;
-      font-weight: 400;
-    }
-    nav {
-      background: #e8f3fa;
-      padding: 0.8rem 0;
-      border-bottom: 1px solid #d1dbe3;
-      text-align: center;
-    }
-    nav a {
-      display: inline-block;
-      margin: 0 1.4rem;
-      color: #1d6fa5;
-      font-weight: 500;
+    .nav-links a {
+      color: #fff;
       text-decoration: none;
-      font-size: 1.08rem;
-      transition: color 0.18s;
+      margin-left: 2rem;
+      font-weight: 500;
+      transition: color 0.15s;
     }
-    nav a:hover {
-      color: #16608a;
+    .nav-links a:hover {
+      color: #c7e0f4;
       text-decoration: underline;
     }
-    main {
-      max-width: 900px;
-      margin: 2.5rem auto;
+    .hero {
+      background: linear-gradient(90deg, #19558a 65%, #2686ce 100%);
+      color: #fff;
+      padding: 2.8rem 0 2.2rem 0;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      margin: 0 0 0.5rem 0;
+      letter-spacing: 0.04em;
+    }
+    .hero p {
+      font-size: 1.19rem;
+      margin: 0 0 0.6rem 0;
+      font-weight: 400;
+    }
+
+    .buttons {
+      margin: 2.2rem 0 1.5rem 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .buttons button {
+      background: #f4f8fb;
+      border: 2px solid #1566b0;
+      color: #19558a;
+      padding: 0.7em 2.2em;
+      margin: 0.6em;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.17s, color 0.15s;
+    }
+    .buttons button.active, .buttons button:hover {
+      background: #1566b0;
+      color: #fff;
+    }
+
+    .tab-content {
+      max-width: 950px;
+      margin: 0 auto;
+      margin-bottom: 2.4rem;
       background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 18px rgba(80,98,118,.07), 0 1.5px 2.5px rgba(80,98,118,0.05);
-      padding: 2.2rem 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 3px 18px rgba(60,80,120,0.09);
+      padding: 2.5rem 2.3rem 1.7rem 2.3rem;
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.6s;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
     }
     h2 {
-      color: #16608a;
-      font-size: 1.5rem;
-      margin-top: 2.2rem;
+      color: #1566b0;
+      margin-top: 0;
+      font-size: 1.45rem;
     }
-    section {
-      margin-bottom: 2.1rem;
-    }
-    ul, ol {
-      margin: 0.6em 0 0.6em 1.6em;
-    }
+    ul, ol { margin-left: 1.7em; }
     .footer {
+      background: #ebf1f7;
+      padding: 1.2em;
       text-align: center;
-      color: #777;
-      font-size: 0.91rem;
-      margin: 2.2rem 0 1.3rem 0;
-      padding-bottom: 0.3rem;
+      color: #666;
+      font-size: 0.97rem;
+      letter-spacing: 0.01em;
     }
-    @media (max-width: 650px) {
-      main { padding: 1rem 0.5rem; }
-      header h1 { font-size: 2rem; }
-      nav a { margin: 0 0.6rem; font-size: 1rem;}
+    @media (max-width: 700px) {
+      .navbar { flex-direction: column; height: auto; padding: 1em 0.2em;}
+      .nav-links { margin-top: 0.5em;}
+      .buttons button { padding: 0.7em 1.1em; font-size: 1rem;}
+      .tab-content { padding: 1.2rem 0.7rem;}
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>eCH-0011 Personendaten-Standard</h1>
-    <p>Schnittstellenstandard für den Austausch von Personendaten in der digitalen Verwaltung</p>
-  </header>
-
-  <nav>
-    <a href="#projekt">Projekt</a>
-    <a href="#nutzen">Nutzen</a>
-    <a href="#datenmodell">Datenmodell</a>
-    <a href="README.md">Technische Details</a>
-    <a href="#team">Kontakt</a>
+  <nav class="navbar">
+    <div class="navbar-brand">eCH-0011 Personendaten</div>
+    <div class="nav-links">
+      <a href="#" onclick="showTab('about')">Überblick</a>
+      <a href="#" onclick="showTab('datenstruktur')">Struktur</a>
+      <a href="#" onclick="showTab('applikation')">Spring Boot App</a>
+      <a href="README.md">Technische Doku</a>
+      <a href="https://www.ech.ch/de/ech/ech-0011/9.0.0" target="_blank">Offizieller Standard</a>
+    </div>
   </nav>
 
-  <main>
-    <section id="projekt">
-      <h2>Projektfokus</h2>
-      <p>
-        Ziel dieses Projekts ist die <strong>Überführung des eCH-0011-Standards</strong> in eine modulare, versionierte und maschinenlesbare Form auf GitHub. Dies fördert die <b>Praxisnähe, Wiederverwendbarkeit</b> und <b>kontinuierliche Weiterentwicklung</b> von Schnittstellen im E-Government.
-      </p>
-      <ul>
-        <li>Definition & Modularisierung der Kerndatenbausteine („Building Blocks“)</li>
-        <li>Etablierung von Feedbackmechanismen über Issues & Discussions</li>
-        <li>Beispiel-Anbindung einer Spring Boot Anwendung mit Nutzungsmonitoring</li>
-      </ul>
-    </section>
+  <div class="hero">
+    <h1>eCH-0011 – <span style="font-weight:400;">Schnittstellenstandard Personendaten</span></h1>
+    <p>Maschinenlesbare, modulare Spezifikation für den Datenaustausch in Schweizer E-Government-Systemen.<br>
+      Version 9.0.0 – Stand: Juli 2023</p>
+    <div class="buttons">
+      <button id="btn_about" class="active" onclick="showTab('about')">Überblick</button>
+      <button id="btn_datenstruktur" onclick="showTab('datenstruktur')">Struktur & Felder</button>
+      <button id="btn_applikation" onclick="showTab('applikation')">Spring Boot App</button>
+    </div>
+  </div>
 
-    <section id="nutzen">
-      <h2>Wofür steht eCH-0011?</h2>
-      <p>
-        Der <strong>eCH-0011 Standard</strong> regelt, wie <b>Personendaten</b> zwischen Behörden, Registern und öffentlicher Verwaltung in der Schweiz elektronisch und sicher ausgetauscht werden.<br>
-        Er bildet damit das technische Rückgrat für Prozesse wie <em>Umzugsmeldungen, Datenabgleiche oder die zentrale Identifikation von Bürger:innen</em>.
-      </p>
-      <ul>
-        <li>Standardisiert Personenidentifikation (AHV-Nummer, Name, Geburtsdaten, Staatsangehörigkeit, etc.)</li>
-        <li>Sichert Interoperabilität und medienbruchfreien Datenaustausch über System- und Behörden-Grenzen hinweg</li>
-        <li>Reduziert Redundanzen, minimiert Fehlerquellen, erhöht die Datenqualität</li>
-      </ul>
-    </section>
+  <div id="tab_about" class="tab-content active">
+    <h2>Was ist eCH-0011?</h2>
+    <p>
+      Der eCH-0011-Standard definiert die <b>Datenstruktur für Personendaten</b> gemäß dem Amtlichen Katalog der Merkmale und dem Registerharmonisierungsgesetz (RHG). 
+      Ziel ist die <b>vereinheitlichte, fehlerfreie und sichere Übermittlung</b> von Personendaten zwischen Behörden, Registern und Fachstellen in der Schweiz.
+    </p>
+    <ul>
+      <li>Standardisierte Merkmale: z.B. Name, Geburtsdaten, Geschlecht, Nationalität, Zivilstand, Heimatort oder Aufenthaltsstatus</li>
+      <li>Basiert technisch auf XML/XSD, kann aber auch als JSON abgebildet werden</li>
+      <li>Referenziert ergänzend eCH-0044 (Personenidentifikation) und eCH-0045 (Wahlrecht)</li>
+      <li>Ermöglicht Austausch unter Einwohnerdiensten, Statistikämtern, Registerbehörden etc.</li>
+      <li>Strikte Definition von Pflicht- und optionalen Feldern</li>
+      <li>Aktuelle Version: 9.0.0 (genehmigt am 2023-06-01)</li>
+    </ul>
+    <h2>Warum ist dieser Standard wichtig?</h2>
+    <ul>
+      <li>Erhöhte Datenqualität und Verlässlichkeit</li>
+      <li>Interoperabilität zwischen allen Verwaltungsebenen</li>
+      <li>Vermeidung von Medienbrüchen und manuellen Fehlerquellen</li>
+      <li>Grundlage für eine digitale, effiziente Verwaltung</li>
+    </ul>
+  </div>
 
-    <section id="datenmodell">
-      <h2>Datenmodell & Versionen</h2>
-      <p>
-        Die wichtigsten Bausteine dieses Standards sind modular als eigene JSON-Schemata gepflegt:
-      </p>
+  <div id="tab_datenstruktur" class="tab-content">
+    <h2>Struktur – Wichtigste Datenfelder v9.0.0</h2>
+    <p>
+      Der Standard beschreibt die Person als <b>zentrale Entität</b> mit folgenden Merkmalgruppen:
+    </p>
+    <ul>
+      <li><b>Personenidentifikation</b>: z.B. AHV-Nummer, lokale IDs</li>
+      <li><b>Namensdaten</b>: amtlicher Name, alle Vornamen, Ledigname, Alias, Rufname, Name gem. ausl. Pass</li>
+      <li><b>Geburtsdaten</b>: Datum, Ort, Geschlecht</li>
+      <li><b>Konfession</b> (falls geführt)</li>
+      <li><b>Zivilstand</b>: Stand, Datum und Ort</li>
+      <li><b>Staatsangehörigkeit(en)</b></li>
+      <li><b>Todesdaten</b> (optional)</li>
+      <li><b>Kontaktinformationen</b> (optional): Adresse, Kommunikationsdaten</li>
+      <li><b>Heimatorte</b> <i>(Schweizer) oder Aufenthaltsstatus (Ausländer)</i></li>
+      <li><b>Korrespondenzsprache</b>, <b>Wahl-/Stimmrechtseinschränkungen</b></li>
+    </ul>
+    <p>
+      <b>Technische Repräsentation:</b> 
       <ul>
-        <li><a href="schemas/person/birthData.json">Geburtsdaten</a></li>
-        <li><a href="schemas/person/nameData.json">Namensdaten</a></li>
-        <li><a href="schemas/person/nationalityData.json">Herkunftsdaten</a></li>
-        <li>Weitere Module in Arbeit …</li>
+        <li>Hauptobjekt <code>person</code></li>
+        <li>Schemadateien <code>eCH-0011-9-0.xsd</code> & <code>eCH-0011-9-0f.xsd</code></li>
+        <li>Strukturierte Trennung nach Pflichtfeldern und optionalen Angaben</li>
       </ul>
-      <p>Nähere Infos zu Aufbau, Versionierung und Nutzung finden sich in der <a href="README.md">README</a>.</p>
-    </section>
+    </p>
+    <p>
+      <b>Weitere Informationen:</b><br>
+      <a href="README.md">Technische Details und Datenmodell</a>
+      <br>
+      <a href="https://www.ech.ch/de/ech/ech-0011/9.0.0" target="_blank">Offizielle Norm</a>
+    </p>
+  </div>
 
-    <section id="team">
-      <h2>Projektteam & Kontakt</h2>
-      <ul>
-        <li>ZHAW School of Management and Law, Leitung: Dr. Christian Hitz</li>
-        <li>Kernteam: Oliver, ...</li>
-        <li>Mail: <a href="mailto:info@zhaw.ch">info@zhaw.ch</a></li>
-      </ul>
-    </section>
-  </main>
+  <div id="tab_applikation" class="tab-content">
+    <h2>Spring Boot Applikation: Nutzen & Demo</h2>
+    <p>
+      Zum Testen und zur Illustration des Standards haben wir eine kleine <b>Spring Boot Anwendung</b> entwickelt. Im Backend werden anonymisiert Nutzungsdaten gezählt, um zu sehen, wie oft Datenmodelle oder Schemata verwendet und angepasst werden.<br>
+      Die <b>mitgelieferte GUI</b> ermöglicht:
+    </p>
+    <ul>
+      <li>Das Bearbeiten und Anpassen von Standardelementen in Echtzeit</li>
+      <li>Die Generierung von unterschiedlichen Versionen/Snapshots als Dokument (Download-Funktion)</li>
+      <li>Direkte Rückmeldung über ein leichtgewichtiges, responsives Interface</li>
+    </ul>
+    <p>
+      <b>Demo/API URL:</b> <code>http://localhost:8080</code> 
+      <br><i>(Deployment auf einer externen oder Cloud-URL geplant)</i>
+    </p>
+  </div>
 
   <div class="footer">
-    Stand: November 2025 – <a href="https://www.ech.ch/de/ech/ech-0011/9.0.0" target="_blank">Mehr zum eCH-0011 Standard</a>
+    &copy; 2025 ZHAW School of Management and Law<br>
+    Seite basiert auf offenen eCH-Richtlinien &ndash; <a href="https://www.ech.ch/de/ech/ech-0011/9.0.0" target="_blank">Offizielles Dokument</a>
   </div>
+  <script>
+    function showTab(tab) {
+      document.querySelectorAll('.tab-content').forEach(function(el) {
+        el.classList.remove('active');
+      });
+      document.querySelectorAll('.buttons button').forEach(function(el) {
+        el.classList.remove('active');
+      });
+      document.getElementById('tab_' + tab).classList.add('active');
+      var btn = document.getElementById('btn_' + tab);
+      if(btn) btn.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 </body>
 </html>
