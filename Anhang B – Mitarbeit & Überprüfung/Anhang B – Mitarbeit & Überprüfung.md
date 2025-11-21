@@ -19,7 +19,7 @@ des Standards **eCH-0011 – Datenstandard Personendaten** mitgewirkt:
 - Daniela Sulzer – Hürlimann Informatik  
 - Max Zurkinden – Bundesamt für Statistik (BFS)
 
-Alle Versionen: [v1.0.0](../versions.md)
+Alle Versionen: [v1.0.0](README.md)
 
 ---
 
