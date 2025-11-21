@@ -43,7 +43,7 @@
 
 ---
 
-Alle Versionen: [v1.0.0](../versions.md)
+Alle Versionen: [v1.0.0](README.md)
 
 ---
 
