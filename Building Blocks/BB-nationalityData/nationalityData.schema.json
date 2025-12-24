@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "nationalityData",
+  "type": "object",
+  "required": ["nationalityStatus"],
+  "properties": {
+    "nationalityStatus": { "$ref": "../micro/nationalityStatus.schema.json" },
+    "countryInfo": {
+      "type": "array",
+      "description": "Staatsangehörigkeit(en) (optional, mehrfach) – countryInfo",
+      "items": { "$ref": "../micro/countryInfo.schema.json" }
+    }
+  },
+  "additionalProperties": false
+}
