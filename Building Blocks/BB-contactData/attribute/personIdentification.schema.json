@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "personIdentification",
+  "type": "object",
+  "properties": {
+    "vn": {
+      "type": "string",
+      "description": "AHV-Versichertennummer (Personenidentifikator gemäss eCH-0044)."
+    },
+    "localPersonId": {
+      "type": "string",
+      "description": "Lokaler Personenidentifikator der liefernden Anwendung."
+    }
+  },
+  "additionalProperties": false,
+  "description": "Personenidentifikatoren einer natürlichen Person."
+}
