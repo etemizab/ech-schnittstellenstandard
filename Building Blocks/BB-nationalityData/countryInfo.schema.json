@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "countryInfo",
+  "type": "object",
+  "required": ["country"],
+  "properties": {
+    "country": { "$ref": "../attribute/country.schema.json" },
+    "nationalityValidFrom": { "$ref": "../attribute/nationalityValidFrom.schema.json" }
+  },
+  "additionalProperties": false
+}
