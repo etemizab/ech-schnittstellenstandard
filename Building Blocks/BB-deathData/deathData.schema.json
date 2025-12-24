@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "deathData",
+  "type": "object",
+  "properties": {
+    "deathPeriod": { "$ref": "../attribute/deathPeriod.schema.json" },
+    "deathDate": { "$ref": "../attribute/deathDate.schema.json" },
+    "placeOfDeath": { "$ref": "../attribute/placeOfDeath.schema.json" }
+  },
+  "oneOf": [
+    { "required": ["deathDate"] },
+    { "required": ["deathPeriod"] }
+  ],
+  "additionalProperties": false
+}
