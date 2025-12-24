@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "contactValidTill",
+  "type": "string",
+  "format": "date",
+  "description": "Angabe bis wann die gelieferten Kontaktinformationen gültig sind (xs:date)."
+}
