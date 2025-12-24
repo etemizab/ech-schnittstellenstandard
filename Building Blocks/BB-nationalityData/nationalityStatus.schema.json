@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "nationalityStatus",
+  "type": "integer",
+  "enum": [0, 1, 2],
+  "description": "Status Staatsangehörigkeit: 0=unbekannt, 1=staatenlos, 2=bekannt"
+}
