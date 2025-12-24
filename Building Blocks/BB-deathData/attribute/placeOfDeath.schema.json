@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "placeOfDeath",
+  "description": "Todesort: Schweiz, Ausland oder unbekannt (generalPlaceType-ähnlich).",
+  "oneOf": [
+    {
+      "title": "unknown",
+      "type": "object",
+      "properties": {
+        "unknown": { "type": "boolean", "const": true }
+      },
+      "required": ["unknown"],
+      "additionalProperties": false
+    },
+    {
+      "title": "swissTown",
+      "type": "object",
+      "properties": {
+        "municipalityName": { "type": "string" },
+        "municipalityId": { "type": "integer" },
+        "cantonAbbreviation": { "type": "string" },
+        "historyMunicipalityId": { "type": "integer" }
+      },
+      "required": ["municipalityName"],
+      "additionalProperties": false
+    },
+    {
+      "title": "foreignCountry",
+      "type": "object",
+      "properties": {
+        "country": { "type": "string" },
+        "town": { "type": "string" }
+      },
+      "required": ["country"],
+      "additionalProperties": false
+    }
+  ]
+}
