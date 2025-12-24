@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "cancelationReason",
+  "type": "integer",
+  "enum": [1, 2, 3, 4, 9],
+  "description": "Auflösungsgrund bei aufgelöster eingetragener Partnerschaft (eCH-0011:partnerShipAbolitionType): 1=Gerichtlich aufgelöst, 2=Ungültigerklärung, 3=Verschollenerklärung, 4=Tod, 9=Unbekannt/Andere."
+}
