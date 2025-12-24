@@ -5,16 +5,16 @@
   "required": ["contactAddress"],
   "properties": {
     "personIdentification": {
-      "$ref": "../micro/personIdentification.schema.json"
+      "$ref": "../attribute/personIdentification.schema.json"
     },
     "contactAddress": {
-      "$ref": "../micro/contactAddress.schema.json"
+      "$ref": "../attribute/contactAddress.schema.json"
     },
     "contactValidFrom": {
-      "$ref": "../micro/contactValidFrom.schema.json"
+      "$ref": "../attribute/contactValidFrom.schema.json"
     },
     "contactValidTill": {
-      "$ref": "../micro/contactValidTill.schema.json"
+      "$ref": "../attribute/contactValidTill.schema.json"
     }
   },
   "additionalProperties": false
