@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "nationalityValidFrom",
+  "type": "string",
+  "format": "date",
+  "description": "Staatsangehörigkeit gültig ab (xs:date)"
+}
