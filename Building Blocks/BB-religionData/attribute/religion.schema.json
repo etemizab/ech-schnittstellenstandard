@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "religion",
+  "type": "string",
+  "description": "Konfessionszugehörigkeit (eCH-0011:religionType). Beispielcodes: 111, 121, 1221, 2112, 000."
+}
