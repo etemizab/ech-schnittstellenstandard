@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "religionData",
+  "type": "object",
+  "required": ["religion"],
+  "properties": {
+    "religion": {
+      "$ref": "../attribute/religion.schema.json"
+    },
+    "religionValidFrom": {
+      "$ref": "../attribute/religionValidFrom.schema.json"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Konfessionsangaben: religion (zwingend) und religionValidFrom (optional)."
+}
