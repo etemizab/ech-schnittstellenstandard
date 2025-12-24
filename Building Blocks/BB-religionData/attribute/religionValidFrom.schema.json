@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "religionValidFrom",
+  "type": "string",
+  "format": "date",
+  "description": "Datum, ab welchem die Konfessionsangaben gültig sind (xs:date)."
+}
