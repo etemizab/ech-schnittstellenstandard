@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "deathPeriod",
+  "type": "object",
+  "required": ["dateFrom", "dateTo"],
+  "properties": {
+    "dateFrom": {
+      "type": "string",
+      "format": "date",
+      "description": "DatumVon (JJJJ-MM-TT / xs:date)."
+    },
+    "dateTo": {
+      "type": "string",
+      "format": "date",
+      "description": "DatumBis (JJJJ-MM-TT / xs:date)."
+    }
+  },
+  "additionalProperties": false,
+  "description": "Todeszeitraum wird durch dateFrom und dateTo abgebildet."
+}
