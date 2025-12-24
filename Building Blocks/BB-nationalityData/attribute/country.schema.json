@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "country",
+  "type": "string",
+  "description": "Staatsangehörigkeit (eCH-0008:countryType)"
+}
