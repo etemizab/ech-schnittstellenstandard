@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "maritalData",
+  "type": "object",
+  "required": ["maritalStatus"],
+  "properties": {
+    "maritalStatus": { "$ref": "../attribute/maritalStatus.schema.json" },
+    "dateOfMaritalStatus": { "$ref": "../attribute/dateOfMaritalStatus.schema.json" },
+    "separation": { "$ref": "../attribute/separation.schema.json" },
+    "separationValidFrom": { "$ref": "../attribute/separationValidFrom.schema.json" },
+    "separationValidTill": { "$ref": "../attribute/separationValidTill.schema.json" },
+    "cancelationReason": { "$ref": "../attribute/cancelationReason.schema.json" },
+    "officialProofOfMaritalStatusYesNo": { "$ref": "../attribute/officialProofOfMaritalStatusYesNo.schema.json" }
+  },
+  "additionalProperties": false
+}
