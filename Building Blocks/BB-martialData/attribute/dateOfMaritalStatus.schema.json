@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "dateOfMaritalStatus",
+  "type": "string",
+  "format": "date",
+  "description": "Datum der letzten Zivilstandsänderung (xs:date)."
+}
