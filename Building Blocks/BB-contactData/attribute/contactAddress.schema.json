@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "contactAddress",
+  "type": "object",
+  "description": "Zustelladresse / Postadresse gemäss eCH-0010 (vereinfachte Abbildung).",
+  "properties": {
+    "street": {
+      "type": "string",
+      "description": "Strassenname"
+    },
+    "houseNumber": {
+      "type": "string",
+      "description": "Hausnummer"
+    },
+    "postOfficeBox": {
+      "type": "string",
+      "description": "Postfach (falls vorhanden)"
+    },
+    "postalCode": {
+      "type": "string",
+      "description": "Postleitzahl"
+    },
+    "city": {
+      "type": "string",
+      "description": "Ort"
+    },
+    "country": {
+      "type": "string",
+      "description": "Land (ISO- oder eCH-0008-Code)"
+    }
+  },
+  "additionalProperties": false
+}
