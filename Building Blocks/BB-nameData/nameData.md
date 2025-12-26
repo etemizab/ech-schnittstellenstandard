@@ -2,7 +2,7 @@
 > **Block-Version:** 0.1.0  \
 > **Status:** Draft  \
 > **Quelle im Standard:** Kapitel 3.3.2 \'96 nameData\
-\
+
 ## 1. Zweck & fachliche Bedeutung\
 Der Building Block *Namensangaben* beschreibt die offiziellen Namen einer Person.  \
 Er umfasst Vor- und Nachnamen sowie optionale Namensvarianten wie Rufnamen oder ausl\'e4ndische Namensformen.\
@@ -36,3 +36,4 @@ Er umfasst Vor- und Nachnamen sowie optionale Namensvarianten wie Rufnamen oder 
 ## 7. Quellen\
 - Verein eCH, eCH-0011 Datenstandard Personendaten, Version 9.0.0\
 - Kapitel 3.3.2}
+
