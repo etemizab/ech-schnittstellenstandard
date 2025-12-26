@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ech-0011/building-blocks/BB-placeOfOrigin/originName.schema.json",
+  "title": "originName – Heimatort",
+  "type": "string",
+  "description": "Name des Heimatorts gemäss eCH-0011.",
+  "minLength": 1,
+  "maxLength": 50
+}

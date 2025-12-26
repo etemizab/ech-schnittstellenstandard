@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ech-0011/building-blocks/BB-person/BB-person.schema.json",
+  "title": "personType (MESO)",
+  "type": "object",
+  "description": "Person gemäss eCH-0011: Identifikation, Name, Geburt, Konfession, Zivilstand, Staatsangehörigkeit usw.",
+  "additionalProperties": false,
+  "required": [
+    "personIdentification",
+    "nameData",
+    "birthData",
+    "religionData",
+    "maritalData",
+    "nationalityData"
+  ],
+  "properties": {
+    "personIdentification": {
+      "description": "BB-03 – Personenidentifikation (eindeutige Identifikation).",
+      "$ref": "../BB-personIdentification/BB-personIdentification.schema.json"
+    },
+    "nameData": {
+      "description": "BB-04 – Namensangaben (Namen und Namensvarianten).",
+      "$ref": "../BB-nameData/BB-nameData.schema.json"
+    },
+    "birthData": {
+      "description": "BB-05 – Geburtsangaben.",
+      "$ref": "../BB-birthData/BB-birthData.schema.json"
+    },
+    "religionData": {
+      "description": "BB-06 – Konfession / Religionszugehörigkeit.",
+      "$ref": "../BB-religionData/BB-religionData.schema.json"
+    },
+    "maritalData": {
+      "description": "BB-07 – Zivilstand.",
+      "$ref": "../BB-maritalData/BB-maritalData.schema.json"
+    },
+    "nationalityData": {
+      "description": "BB-08 – Staatsangehörigkeit / Nationalitäten.",
+      "$ref": "../BB-nationalityData/BB-nationalityData.schema.json"
+    },
+    "deathData": {
+      "description": "BB-09 – Todesangaben (optional).",
+      "$ref": "../BB-deathData/BB-deathData.schema.json"
+    },
+    "contactData": {
+      "description": "BB-10 – Kontaktangaben (optional).",
+      "$ref": "../BB-contactData/BB-contactData.schema.json"
+    },
+    "placeOfOrigin": {
+      "description": "BB-11 – Heimatort (bedingt, nur für Schweizer Personen).",
+      "$ref": "../BB-placeOfOrigin/BB-placeOfOrigin.schema.json"
+    },
+    "residencePermitData": {
+      "description": "BB-12 – Ausländerkategorie (bedingt, nur für Personen ohne Schweizer Staatsangehörigkeit).",
+      "$ref": "../BB-residencePermitData/BB-residencePermitData.schema.json"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ech-0011/building-blocks/BB-personIdentification/identificationNumber.schema.json",
+  "title": "identificationNumber – Personenkennung",
+  "type": "string",
+  "description": "Eindeutige Personenkennung (z.B. AHV-Nummer oder lokale Personen-ID) gemäss eCH-0011.",
+  "minLength": 1,
+  "maxLength": 50
+}

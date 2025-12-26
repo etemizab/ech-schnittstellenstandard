@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ech-0011/building-blocks/BB-personIdentification/BB-personIdentification.schema.json",
+  "title": "personIdentificationType (MESO)",
+  "type": "object",
+  "description": "Personenidentifikation gemäss eCH-0011: eindeutige Kennung und Typ der Kennung.",
+  "additionalProperties": false,
+  "required": [
+    "identificationNumber",
+    "identificationType"
+  ],
+  "properties": {
+    "identificationNumber": {
+      "$ref": "./identificationNumber.schema.json"
+    },
+    "identificationType": {
+      "$ref": "./identificationType.schema.json"
+    }
+  }
+}

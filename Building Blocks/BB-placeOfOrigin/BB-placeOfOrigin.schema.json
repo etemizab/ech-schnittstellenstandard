@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ech-0011/building-blocks/BB-placeOfOrigin/BB-placeOfOrigin.schema.json",
+  "title": "placeOfOriginType (MESO)",
+  "type": "object",
+  "description": "Heimatort gemäss eCH-0011: Name, Kanton und optionale Identifikatoren.",
+  "additionalProperties": false,
+  "required": [
+    "originName",
+    "canton"
+  ],
+  "properties": {
+    "originName": {
+      "$ref": "./originName.schema.json"
+    },
+    "canton": {
+      "$ref": "./canton.schema.json"
+    },
+    "originId": {
+      "$ref": "./originId.schema.json"
+    }
+  }
+}

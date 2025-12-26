@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ech-0011/building-blocks/BB-placeOfOrigin/canton.schema.json",
+  "title": "canton – Kanton des Heimatorts",
+  "type": "string",
+  "description": "Offizielles Kantonskürzel des Heimatorts (eCH-0007:cantonAbbreviationType).",
+  "minLength": 2,
+  "maxLength": 2
+}

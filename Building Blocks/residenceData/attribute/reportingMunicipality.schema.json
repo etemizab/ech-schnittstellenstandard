@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ech-0011/building-blocks/BB-residenceData/reportingMunicipality.schema.json",
+  "title": "reportingMunicipality – Meldende Gemeinde",
+  "type": "object",
+  "description": "Meldegemeinde gemäss eCH-0007:swissMunicipalityType.",
+  "additionalProperties": false,
+  "properties": {
+    "municipalityId": {
+      "type": "string",
+      "description": "BFS-Gemeindenummer der Meldegemeinde."
+    },
+    "municipalityName": {
+      "type": "string",
+      "description": "Name der Meldegemeinde."
+    },
+    "cantonAbbreviation": {
+      "type": "string",
+      "description": "Kantonskürzel (z.B. ZH, BE).",
+      "minLength": 2,
+      "maxLength": 2
+    }
+  }
+}

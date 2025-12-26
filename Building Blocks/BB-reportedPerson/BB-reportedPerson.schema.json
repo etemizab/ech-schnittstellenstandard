@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ech-0011/building-blocks/BB-reportedPerson/BB-reportedPerson.schema.json",
+  "title": "reportedPersonType (MESO)",
+  "type": "object",
+  "description": "Gemeldete Person gemäss eCH-0011: zentrale Personendaten und zugehörige Meldeverhältnisse.",
+  "additionalProperties": false,
+  "required": [
+    "person",
+    "reportingRelation"
+  ],
+  "properties": {
+    "person": {
+      "description": "BB-02 – Person (zentrale Personeninformationen).",
+      "$ref": "../BB-person/BB-person.schema.json"
+    },
+    "reportingRelation": {
+      "description": "BB-13 – Meldeverhältnis (1..n Wohn- und Aufenthaltsverhältnisse).",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "../BB-reportingRelation/BB-reportingRelation.schema.json"
+      }
+    }
+  }
+}

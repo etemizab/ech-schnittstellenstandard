@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ech-0011/building-blocks/BB-destinationType/destinationTypeFlag.schema.json",
+  "title": "destinationType – Typ des Ortes",
+  "type": "string",
+  "description": "Typ des Ortes: Schweizer Gemeinde, ausländischer Staat oder Postadresse.",
+  "enum": ["swissTown", "foreignCountry", "mailAddress"],
+  "oneOf": [
+    { "const": "swissTown", "description": "Schweizer Gemeinde" },
+    { "const": "foreignCountry", "description": "Ausländischer Staat" },
+    { "const": "mailAddress", "description": "Postadresse" }
+  ]
+}

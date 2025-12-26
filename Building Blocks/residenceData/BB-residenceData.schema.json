@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ech-0011/building-blocks/BB-residenceData/BB-residenceData.schema.json",
+  "title": "residenceDataType (MESO)",
+  "type": "object",
+  "description": "Meldeverhältnis zur Meldegemeinde gemäss eCH-0011.",
+  "additionalProperties": false,
+  "required": [
+    "reportingMunicipality",
+    "residenceType",
+    "dwellingAddress"
+  ],
+  "properties": {
+    "reportingMunicipality": {
+      "$ref": "./reportingMunicipality.schema.json"
+    },
+    "residenceType": {
+      "$ref": "./residenceType.schema.json"
+    },
+    "arrival": {
+      "$ref": "./arrival.schema.json"
+    },
+    "departure": {
+      "$ref": "./departure.schema.json"
+    },
+    "dwellingAddress": {
+      "$ref": "../BB-dwellingAddress/BB-dwellingAddress.schema.json"
+    }
+  }
+}

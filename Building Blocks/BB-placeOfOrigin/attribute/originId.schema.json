@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ech-0011/building-blocks/BB-placeOfOrigin/originId.schema.json",
+  "title": "originId – Identifikator des Heimatorts",
+  "type": "string",
+  "description": "Eindeutiger, über die Zeit stabiler Identifikator des Heimatorts (placeOfOriginId) gemäss eCH-0135.",
+  "maxLength": 20
+}

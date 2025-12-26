@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ech-0011/building-blocks/BB-residencePermitData/validFrom.schema.json",
+  "title": "validFrom – Gültig ab",
+  "type": "string",
+  "description": "Datum, ab dem die Bewilligung gültig ist (ISO-8601, YYYY-MM-DD).",
+  "format": "date"
+}

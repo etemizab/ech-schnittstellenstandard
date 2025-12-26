@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ech-0011/building-blocks/BB-destinationType/foreignCountry.schema.json",
+  "title": "foreignCountry – Ausländischer Staat",
+  "type": "object",
+  "description": "Ausländischer Staat gemäss eCH-0011.",
+  "additionalProperties": false,
+  "properties": {
+    "country": {
+      "type": "string",
+      "description": "Ländercode nach ISO 3166-1 Alpha-2 (z.B. DE, FR).",
+      "minLength": 2,
+      "maxLength": 2
+    },
+    "town": {
+      "type": "string",
+      "description": "Name der Stadt/Ortschaft im Ausland."
+    }
+  }
+}

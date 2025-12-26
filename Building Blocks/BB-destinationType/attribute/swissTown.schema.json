@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ech-0011/building-blocks/BB-destinationType/swissTown.schema.json",
+  "title": "swissTown – Schweizer Gemeinde",
+  "type": "object",
+  "description": "Schweizer Gemeinde gemäss eCH-0007:suisseMunicipalityType.",
+  "additionalProperties": false,
+  "properties": {
+    "municipalityId": {
+      "type": "string",
+      "description": "BFS-Gemeindenummer."
+    },
+    "municipalityName": {
+      "type": "string",
+      "description": "Name der Gemeinde."
+    },
+    "cantonAbbreviation": {
+      "type": "string",
+      "description": "Kantonskürzel (z.B. ZH, BE).",
+      "minLength": 2,
+      "maxLength": 2
+    }
+  }
+}

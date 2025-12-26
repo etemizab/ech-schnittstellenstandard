@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ech-0011/building-blocks/BB-residenceData/departure.schema.json",
+  "title": "departure – Wegzugsinformation",
+  "type": "object",
+  "description": "Informationen zum Wegzug (departureDate und optional Zielort).",
+  "additionalProperties": false,
+  "properties": {
+    "departureDate": {
+      "type": "string",
+      "description": "Wegzugsdatum aus der Meldegemeinde (ISO-8601, YYYY-MM-DD).",
+      "format": "date"
+    },
+    "goesTo": {
+      "type": "string",
+      "description": "Freitext oder Schlüssel des Zielorts (optional)."
+    }
+  }
+}

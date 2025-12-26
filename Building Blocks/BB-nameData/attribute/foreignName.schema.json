@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ech-0011/building-blocks/BB-nameData/foreignName.schema.json",
+  "title": "foreignName – Ausländische Namensform",
+  "type": "string",
+  "description": "Ausländische Namensform gemäss eCH-0011.",
+  "maxLength": 300
+}

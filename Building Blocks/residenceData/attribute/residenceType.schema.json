@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ech-0011/building-blocks/BB-residenceData/residenceType.schema.json",
+  "title": "residenceType – Art des Meldeverhältnisses",
+  "type": "string",
+  "description": "Art des Meldeverhältnisses gemäss eCH-0011:typeOfResidenceType.",
+  "enum": [
+    "mainResidence",
+    "secondaryResidence",
+    "otherResidence"
+  ]
+}

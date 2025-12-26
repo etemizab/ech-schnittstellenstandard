@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ech-0011/building-blocks/BB-residenceData/arrival.schema.json",
+  "title": "arrival – Zuzugsinformation",
+  "type": "object",
+  "description": "Informationen zum Zuzug (arrivalDate und optional Herkunftsort).",
+  "additionalProperties": false,
+  "properties": {
+    "arrivalDate": {
+      "type": "string",
+      "description": "Zuzugsdatum in die Meldegemeinde (ISO-8601, YYYY-MM-DD).",
+      "format": "date"
+    },
+    "comesFrom": {
+      "type": "string",
+      "description": "Freitext oder Schlüssel des Herkunftsorts (optional)."
+    }
+  }
+}

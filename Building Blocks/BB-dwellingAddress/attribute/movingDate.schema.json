@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ech-0011/building-blocks/BB-dwellingAddress/movingDate.schema.json",
+  "title": "movingDate – Einzugsdatum",
+  "type": "string",
+  "description": "Einzugsdatum in die Wohnung, ISO-8601 Datum (YYYY-MM-DD).",
+  "format": "date"
+}

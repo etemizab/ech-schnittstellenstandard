@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ech-0011/building-blocks/BB-nameData/officialLastName.schema.json",
+  "title": "officialLastName – Amtlicher Nachname",
+  "type": "string",
+  "description": "Amtlicher Familienname gemäss eCH-0011.",
+  "minLength": 1,
+  "maxLength": 300
+}

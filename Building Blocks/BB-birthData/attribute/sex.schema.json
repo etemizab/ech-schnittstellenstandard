@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ech-0011/building-blocks/BB-birthData/sex.schema.json",
+  "title": "sex – Geschlecht",
+  "type": "integer",
+  "description": "Geschlecht gemäss eCH-0011.",
+  "enum": [1, 2, 3],
+  "oneOf": [
+    { "const": 1, "description": "1 = männlich" },
+    { "const": 2, "description": "2 = weiblich" },
+    { "const": 3, "description": "3 = unbestimmt" }
+  ]
+}

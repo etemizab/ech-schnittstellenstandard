@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ech-0011/building-blocks/BB-destinationType/BB-destinationType.schema.json",
+  "title": "destinationType (MESO)",
+  "type": "object",
+  "description": "Typ des Ortes gemäss eCH-0011: Schweizer Gemeinde, ausländischer Staat oder Postadresse.",
+  "additionalProperties": false,
+  "required": ["destinationType"],
+  "properties": {
+    "destinationType": {
+      "$ref": "./destinationTypeFlag.schema.json"
+    },
+    "swissTown": {
+      "$ref": "./swissTown.schema.json"
+    },
+    "foreignCountry": {
+      "$ref": "./foreignCountry.schema.json"
+    },
+    "mailAddress": {
+      "$ref": "./mailAddress.schema.json"
+    }
+  }
+}

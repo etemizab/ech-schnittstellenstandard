@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ech-0011/building-blocks/BB-residencePermitData/BB-residencePermitData.schema.json",
+  "title": "residencePermitDataType (MESO)",
+  "type": "object",
+  "description": "Aufenthaltsbewilligung gemäss eCH-0011.",
+  "additionalProperties": false,
+  "required": [
+    "residencePermit"
+  ],
+  "properties": {
+    "residencePermit": {
+      "$ref": "./residencePermit.schema.json"
+    },
+    "validFrom": {
+      "$ref": "./validFrom.schema.json"
+    },
+    "validTo": {
+      "$ref": "./validTo.schema.json"
+    },
+    "entryDate": {
+      "$ref": "./entryDate.schema.json"
+    }
+  }
+}

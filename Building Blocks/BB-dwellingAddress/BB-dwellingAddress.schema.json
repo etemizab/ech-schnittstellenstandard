@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ech-0011/building-blocks/BB-dwellingAddress/BB-dwellingAddress.schema.json",
+  "title": "dwellingAddressType (MESO)",
+  "type": "object",
+  "description": "Wohnadresse gemäss eCH-0011 mit physischer Adresse, Gebäude- und Wohnungsidentifikator.",
+  "additionalProperties": false,
+  "required": ["address"],
+  "properties": {
+    "address": {
+      "$ref": "./address.schema.json"
+    },
+    "EGID": {
+      "$ref": "./egid.schema.json"
+    },
+    "EWID": {
+      "$ref": "./ewid.schema.json"
+    },
+    "householdId": {
+      "$ref": "./householdId.schema.json"
+    },
+    "movingDate": {
+      "$ref": "./movingDate.schema.json"
+    }
+  }
+}

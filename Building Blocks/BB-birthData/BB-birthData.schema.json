@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ech-0011/building-blocks/BB-birthData/BB-birthData.schema.json",
+  "title": "birthDataType (MESO)",
+  "type": "object",
+  "description": "Geburtsangaben gemäss eCH-0011: dateOfBirth, placeOfBirth, sex.",
+  "additionalProperties": false,
+  "required": [
+    "dateOfBirth",
+    "placeOfBirth",
+    "sex"
+  ],
+  "properties": {
+    "dateOfBirth": {
+      "$ref": "./dateOfBirth.schema.json"
+    },
+    "placeOfBirth": {
+      "$ref": "./placeOfBirth.schema.json"
+    },
+    "sex": {
+      "$ref": "./sex.schema.json"
+    }
+  }
+}
+

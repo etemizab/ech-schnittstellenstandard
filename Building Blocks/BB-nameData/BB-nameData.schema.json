@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ech-0011/building-blocks/BB-nameData/BB-nameData.schema.json",
+  "title": "nameDataType (MESO)",
+  "type": "object",
+  "description": "Namensangaben gemäss eCH-0011: amtliche Vor- und Nachnamen sowie alternative Namensformen.",
+  "additionalProperties": false,
+  "required": [
+    "officialFirstName",
+    "officialLastName"
+  ],
+  "properties": {
+    "officialFirstName": {
+      "$ref": "./officialFirstName.schema.json"
+    },
+    "officialLastName": {
+      "$ref": "./officialLastName.schema.json"
+    },
+    "aliasName": {
+      "$ref": "./aliasName.schema.json"
+    },
+    "foreignName": {
+      "$ref": "./foreignName.schema.json"
+    }
+  }
+}

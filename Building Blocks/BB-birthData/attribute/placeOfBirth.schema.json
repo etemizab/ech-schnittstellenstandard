@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ech-0011/building-blocks/BB-birthData/placeOfBirth.schema.json",
+  "title": "placeOfBirth – Geburtsort",
+  "type": "object",
+  "description": "Geburtsort gemäss eCH-0011: unbekannt, Schweizer Gemeinde oder Ort im Ausland.",
+  "additionalProperties": false,
+  "properties": {
+    "unknown": {
+      "type": "boolean",
+      "description": "true, wenn der Geburtsort unbekannt ist."
+    },
+    "municipalityId": {
+      "type": "string",
+      "description": "BFS-Nummer der Schweizer Gemeinde (falls Geburt in der Schweiz)."
+    },
+    "municipalityName": {
+      "type": "string",
+      "description": "Name der Schweizer Gemeinde (optional, ergänzend zur BFS-Nummer)."
+    },
+    "country": {
+      "type": "string",
+      "description": "Ländercode des Geburtsorts (ISO 3166-1 Alpha-2, z.B. 'CH').",
+      "minLength": 2,
+      "maxLength": 2
+    },
+    "foreignPlaceName": {
+      "type": "string",
+      "description": "Name des Geburtsorts im Ausland (falls vorhanden)."
+    }
+  }
+}

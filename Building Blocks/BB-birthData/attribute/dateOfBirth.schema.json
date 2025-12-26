@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ech-0011/building-blocks/BB-birthData/dateOfBirth.schema.json",
+  "title": "dateOfBirth – Geburtsdatum",
+  "type": "string",
+  "description": "Geburtsdatum gemäss eCH-0011: vollständiges oder teilweise bekanntes Datum (Jahr, Jahr-Monat oder Jahr-Monat-Tag).",
+  "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$",
+  "examples": [
+    "1990-05-21",
+    "1990-05",
+    "1990"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/ech-0011/building-blocks/BB-destinationType/mailAddress.schema.json",
+  "title": "mailAddress – Postadresse",
+  "type": "object",
+  "description": "Postadresse als Zielort gemäss eCH-0011/eCH-0010 (vereinfachte Struktur).",
+  "additionalProperties": true,
+  "properties": {
+    "street": {
+      "type": "string",
+      "description": "Strasse und Hausnummer."
+    },
+    "zipCode": {
+      "type": "string",
+      "description": "Postleitzahl."
+    },
+    "town": {
+      "type": "string",
+      "description": "Ort der Postadresse."
+    },
+    "country": {
+      "type": "string",
+      "description": "Ländercode nach ISO 3166-1 Alpha-2.",
+      "minLength": 2,
+      "maxLength": 2
+    }
+  }
+}
