@@ -1,7 +1,7 @@
 # BB-03 – birthData (Geburtsangaben)
 
 ![Version](https://img.shields.io/badge/version-0.1.0-blue)
-&nbsp;&nbsp;Alle Versionen: [v0.1.0](README.md)
+&nbsp;&nbsp;Alle Versionen: [v0.1.0](birthDate.md)
 
 ---
 
@@ -77,4 +77,5 @@ Er stellt einen stabilen und grundsätzlich unveränderlichen Bestandteil der Pe
 · [Fehler melden](https://github.com/etemizab/ech-schnittstellenstandard/discussions/categories/q-a)
 · [Verbesserung vorschlagen](https://github.com/etemizab/ech-schnittstellenstandard/discussions/categories/ideas)
 · [Alle Diskussionen](https://github.com/etemizab/ech-schnittstellenstandard/discussions)
+
 
