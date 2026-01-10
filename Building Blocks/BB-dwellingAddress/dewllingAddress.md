@@ -1,7 +1,7 @@
 # BB-XX – dwellingAddressType (Wohnadresse)
 
 ![Version](https://img.shields.io/badge/version-0.1.0-blue)
-&nbsp;&nbsp;Alle Versionen: [v0.1.0](README.md)
+&nbsp;&nbsp;Alle Versionen: [v0.1.0](dewellingAddress.md)
 
 ---
 
@@ -78,4 +78,5 @@ Er enthält sowohl adressbezogene Informationen als auch wohnungs- und haushalts
 · [Fehler melden](https://github.com/etemizab/ech-schnittstellenstandard/discussions/categories/q-a)
 · [Verbesserung vorschlagen](https://github.com/etemizab/ech-schnittstellenstandard/discussions/categories/ideas)
 · [Alle Diskussionen](https://github.com/etemizab/ech-schnittstellenstandard/discussions)
+
 
