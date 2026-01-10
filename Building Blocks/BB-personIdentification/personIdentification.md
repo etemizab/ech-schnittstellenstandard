@@ -1,7 +1,7 @@
 # BB-03 – personIdentificationType (Personenidentifikation)
 
 ![Version](https://img.shields.io/badge/version-0.1.0-blue)
-&nbsp;&nbsp;Alle Versionen: [v0.1.0](README.md)
+&nbsp;&nbsp;Alle Versionen: [v0.1.0](personIdentification.md)
 
 ---
 
@@ -75,3 +75,4 @@ Er basiert auf dem externen Standard **eCH-0044** und ermöglicht die eindeutige
 · [Fehler melden](https://github.com/etemizab/ech-schnittstellenstandard/discussions/categories/q-a)
 · [Verbesserung vorschlagen](https://github.com/etemizab/ech-schnittstellenstandard/discussions/categories/ideas)
 · [Alle Diskussionen](https://github.com/etemizab/ech-schnittstellenstandard/discussions)
+
