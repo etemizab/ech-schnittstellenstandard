@@ -1,4 +1,4 @@
-# BB – contactData (Kontaktangaben)
+# BB-03 – contactData (Kontaktangaben)
 
 ![Version](https://img.shields.io/badge/version-0.1.0-blue)
 &nbsp;&nbsp;Alle Versionen: [v0.1.0](contactData.md)
@@ -76,4 +76,5 @@ Er dient primär der Zustellung von amtlicher Korrespondenz.
 · [Fehler melden](https://github.com/etemizab/ech-schnittstellenstandard/discussions/categories/q-a)
 · [Verbesserung vorschlagen](https://github.com/etemizab/ech-schnittstellenstandard/discussions/categories/ideas)
 · [Alle Diskussionen](https://github.com/etemizab/ech-schnittstellenstandard/discussions)
+
 
