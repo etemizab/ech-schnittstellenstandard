@@ -30,7 +30,7 @@ Der Fokus liegt auf:
 
 ## 4 Feedback & Mitarbeit
 
-- [4 Feedback & Mitarbeit](#4-feedback-mitarbeit)
+- [4.1 Feedback & Mitarbeit](#4-1-feedback-mitarbeit)
 
 
 ## [5 Haftungsausschluss/Hinweise auf Rechte Dritter](#5-Haftungsausschluss)
