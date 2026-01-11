@@ -2,13 +2,9 @@
 
 ## Projektkontext
 
-Dieses Repository ist ein **Proof-of-Concept** im Rahmen des  
-**Data Science Project (Herbstsemester 2025)**  
-der **ZHAW – School of Management and Law**, in Zusammenarbeit mit dem **Verein eCH**.
+Dieses Repository ist ein **Proof-of-Concept** im Rahmen des  **Data Science Project (Herbstsemester 2025)**  der **ZHAW – School of Management and Law**, in Zusammenarbeit mit dem **Verein eCH**.
 
-Ziel des Projekts ist es, den Standard **eCH-0011 – Datenstandard Personendaten** aus seiner
-statischen PDF-Form in eine **modulare, versionierte und kollaborativ weiterentwickelbare**
-GitHub-Struktur zu überführen.
+Ziel des Projekts ist es, den Standard **eCH-0011 – Datenstandard Personendaten** aus seiner statischen PDF-Form in eine **modulare, versionierte und kollaborativ weiterentwickelbare** GitHub-Struktur zu überführen.
 
 Der Fokus liegt auf:
 - Modularisierung in **Building Blocks**
