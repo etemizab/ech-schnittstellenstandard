@@ -253,9 +253,9 @@ und die Organisation der modularen Building Blocks.
 /
 ├─ README.md
 ├─ building-blocks/
-│  ├─ birthData/
-│  │  ├─ README.md
-│  │  ├─ schema.json
+│  ├─ BB-birthData/
+│  │  ├─ birthDate.md
+│  │  ├─ BB-birthData.schema.json
 │  │  └─ attributes/
 │  └─ ...
 ├─ schemas/
