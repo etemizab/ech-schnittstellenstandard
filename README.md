@@ -12,6 +12,12 @@ Der Fokus liegt auf:
 - Versionierung & Nachvollziehbarkeit
 - Transparente Feedback-Mechanismen
 
+  🌐 **Web-basierte Projektansicht (GitHub Pages)**  
+Für dieses Proof-of-Concept steht eine web-basierte Ansicht zur Verfügung,
+die die modulare Struktur und die implementierten Building Blocks interaktiv darstellt:
+
+👉 https://etemizab.github.io/ech-schnittstellenstandard/
+
 ## Hinweis zum Projektstatus und Geltungsbereich
 Dieses Repository stellt keinen offiziellen eCH-Standard dar, sondern einen experimentellen Proof-of-Concept im akademischen Kontext. Der inhaltliche Fokus ist ausschliesslich auf den Standard eCH-0011 (Datenstandard Personendaten) beschränkt; andere eCH-Standards werden lediglich als konzeptioneller Referenzrahmen erwähnt und sind nicht Teil der Implementierung. Ziel des Projekts ist es, exemplarisch aufzuzeigen, wie ein bestehender eCH-Standard modular, versioniert und kollaborativ auf GitHub abgebildet werden kann. Die vorgestellte Nutzungsmessung und Web-Applikation dienen ausschliesslich der experimentellen Evaluation und sind kein Bestandteil eines produktiven eCH-Standards. Die primäre Zielgruppe dieses Repositories sind Standardisierungsverantwortliche und Fachgruppen bei eCH, sekundär Entwickler und Studierende.
 
