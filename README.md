@@ -222,6 +222,41 @@ Alle Versionen: [v1.0.0](README.md)
 
 ---
 
+---
+<a id="2-Datenmodell "></a>
+## 2. Datenmodell · Version: ![v1.0.0](https://img.shields.io/badge/version-1.0.0-blue)
+<a id="2-1-Building Blocks"></a>
+### 2.1 Building Blocks · Version: ![v1.0.0](https://img.shields.io/badge/version-1.0.0-blue)
+
+Die fachliche Struktur von eCH-0011 wird in **modulare Building Blocks** zerlegt.
+Jeder Block besteht aus:
+- einer fachlichen Markdown-Beschreibung
+- einem JSON-Schema auf Meso-Ebene
+- einzelnen Attribut-Schemas auf Mikro-Ebene
+
+### Beispielhafte Building Blocks
+- `person`
+- `nameData`
+- `birthData`
+- `maritalData`
+- `nationalityData`
+- `religionData`
+- `residenceData`
+- `reportedPerson`
+
+Die vollständige Liste befindet sich im Verzeichnis `/building-blocks`.
+
+---
+
+
+
+Alle Versionen: [v1.0.0](README.md)
+
+---
+**Feedback**: [Ankündigungen von eCH](https://github.com/etemizab/ech-schnittstellenstandard/discussions/categories/announcements) ·  [Fehler melden](https://github.com/etemizab/ech-schnittstellenstandard/discussions/categories/q-a) · [Verbesserung vorschlagen](https://github.com/etemizab/ech-schnittstellenstandard/discussions/categories/ideas) · [Alle Diskussionen](https://github.com/etemizab/ech-schnittstellenstandard/discussions)
+
+---
+
 <a id="5-Haftungsausschluss"></a>
 ### 5. Haftungsausschluss/Hinweise auf Rechte Dritter · Version: ![v1.0.0](https://img.shields.io/badge/version-1.0.0-blue)
 
