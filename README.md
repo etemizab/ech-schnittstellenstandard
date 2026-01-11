@@ -36,16 +36,6 @@ Dieses Repository stellt keinen offiziellen eCH-Standard dar, sondern einen expe
 
 ---
 
-
-## Anhänge
-- Referenzen / Bibliografie
-- Mitarbeit / Überprüfung
-- Abkürzungen / Glossar
-- Änderungen zu Vorversion
-- Abbildungsverzeichnis
-- Tabellenverzeichnis
-  
----
 <a id="1-Einleitung"></a>
 ## 1. Einleitung · Version: ![v1.0.0](https://img.shields.io/badge/version-1.0.0-blue)
 <a id="1-1-Status"></a>
