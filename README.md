@@ -268,10 +268,38 @@ Alle Versionen: [v1.0.0](README.md)
 **Feedback**: [Ankündigungen von eCH](https://github.com/etemizab/ech-schnittstellenstandard/discussions/categories/announcements) ·  [Fehler melden](https://github.com/etemizab/ech-schnittstellenstandard/discussions/categories/q-a) · [Verbesserung vorschlagen](https://github.com/etemizab/ech-schnittstellenstandard/discussions/categories/ideas) · [Alle Diskussionen](https://github.com/etemizab/ech-schnittstellenstandard/discussions)
 
 ---
+<a id="4-Feedback & Mitarbeit"></a>
+## 4. 4-Feedback & Mitarbeit · Version: ![v1.0.0](https://img.shields.io/badge/version-1.0.0-blue)
+<a id="4-1-Feedback & Mitarbeit"></a>
+### 4-1-Feedback & Mitarbeit · Version: ![v1.0.0](https://img.shields.io/badge/version-1.0.0-blue)
+
+
+Dieses Repository wird offen und kollaborativ weiterentwickelt. Feedback, Fragen und Verbesserungsvorschläge sind ausdrücklich erwünscht und erfolgen über die
+standardmässigen GitHub-Mechanismen:
+
+- 💬 **GitHub Discussions**  
+  Für fachliche Fragen, konzeptionelle Diskussionen und Interpretationsfragen
+  zu einzelnen Building Blocks oder Attributen.
+
+- 🐞 **GitHub Issues**  
+  Für Fehler, Unklarheiten in den Schemas, technische Probleme
+  sowie konkrete Verbesserungsvorschläge.
+
+Alle Beiträge werden versioniert dokumentiert und sind öffentlich nachvollziehbar. Ziel ist eine **transparente, strukturierte und kontinuierliche Weiterentwicklung**
+des Standards im Sinne eines lebendigen GitHub-Repositories.
+
+Alle Versionen: [v1.0.0](README.md)
+
+---
+**Feedback**: [Ankündigungen von eCH](https://github.com/etemizab/ech-schnittstellenstandard/discussions/categories/announcements) ·  [Fehler melden](https://github.com/etemizab/ech-schnittstellenstandard/discussions/categories/q-a) · [Verbesserung vorschlagen](https://github.com/etemizab/ech-schnittstellenstandard/discussions/categories/ideas) · [Alle Diskussionen](https://github.com/etemizab/ech-schnittstellenstandard/discussions)
+
+---
 
 
 <a id="5-Haftungsausschluss"></a>
 ### 5. Haftungsausschluss/Hinweise auf Rechte Dritter · Version: ![v1.0.0](https://img.shields.io/badge/version-1.0.0-blue)
+<a id="5-1-Haftungsausschluss"></a>
+### 5-1-Haftungsausschluss · Version: ![v1.0.0](https://img.shields.io/badge/version-1.0.0-blue)
 
 eCH-Standards, welche der Verein eCH den Benutzenden zur unentgeltlichen Nutzung zur Verfügung stellen oder welche eCH referenzieren, haben nur den Status von Empfehlungen. Der Verein eCH haftet in keinem Fall für Entscheidungen oder Massnahmen, welche den Benutzenden auf Grund dieser Dokumente trifft und / oder ergreift. Die Benutzenden sind verpflichtet, die Dokumente vor deren Nutzung selbst zu überprüfen und sich gegebenenfalls beraten zu lassen. eCH-Standards können und sollen die technische, organisatorische oder juristische Beratung im konkreten Einzelfall nicht ersetzen. In eCH-Standards referenzierte Dokumente, Verfahren, Methoden, Produkte und Standards sind unter Umständen markenrechtlich, urheberrechtlich oder patentrechtlich geschützt. Es liegt in der ausschliesslichen Verantwortlichkeit der Benutzenden, sich die allenfalls erforderlichen Rechte bei den jeweils berechtigten Personen und/oder Organisationen zu beschaffen.  Obwohl der Verein eCH all seine Sorgfalt darauf verwendet, die eCH-Standards sorgfältig auszuarbeiten, kann keine Zusicherung oder Garantie auf Aktualität, Vollständigkeit, Richtigkeit bzw. Fehlerfreiheit der zur Verfügung gestellten Informationen und Dokumente gegeben werden. Der Inhalt von eCH-Standards kann jederzeit und ohne Ankündigung geändert werden. Jede Haftung für Schäden, welche den Benutzenden aus dem Gebrauch der eCH-Standards entstehen ist, soweit gesetzlich zulässig, wegbedungen.  
 
@@ -284,6 +312,8 @@ Alle Versionen: [v1.0.0](README.md)
 
 <a id="6-Urheberrechte"></a>
 ### 6. Urheberrechte · Version: ![v1.0.0](https://img.shields.io/badge/version-1.0.0-blue)
+<a id="6-1-Urheberrechte"></a>
+### 6-1-Urheberrechte" · Version: ![v1.0.0](https://img.shields.io/badge/version-1.0.0-blue)
 
 Wer eCH-Standards erarbeitet, behält das geistige Eigentum an diesen. Allerdings verpflichtet sich die Erarbeitenden, ihr betreffendes geistiges Eigentum oder ihre Rechte an geistigem Eigentum anderer, sofern möglich, den jeweiligen Fachgruppen und dem Verein eCH kostenlos zur uneingeschränkten Nutzung und Weiterentwicklung im Rahmen des Vereinszweckes zur Verfügung zu stellen. Die von den Fachgruppen erarbeiteten Standards können unter Nennung der jeweiligen Urheber von eCH unentgeltlich und uneingeschränkt genutzt, weiterverbreitet und weiterentwickelt werden.  eCH-Standards sind vollständig dokumentiert und frei von lizenz- und/oder patentrechtlichen Einschränkungen. Die dazugehörige Dokumentation kann unentgeltlich bezogen werden. Diese Bestimmungen gelten ausschliesslich für die von eCH erarbeiteten Standards, nicht jedoch für Standards oder Produkte Dritter, auf welche in den eCH-Standards Bezug genommen wird. Die Standards enthalten die entsprechenden Hinweise auf die Rechte Dritter. 
 
