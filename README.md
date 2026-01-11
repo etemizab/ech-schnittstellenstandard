@@ -12,9 +12,8 @@ Der Fokus liegt auf:
 - Versionierung & Nachvollziehbarkeit
 - Transparente Feedback-Mechanismen
 
-  🌐 **Web-basierte Projektansicht (GitHub Pages)**  
-Für dieses Proof-of-Concept steht eine web-basierte Ansicht zur Verfügung,
-die die modulare Struktur und die implementierten Building Blocks interaktiv darstellt:
+🌐 **Web-basierte Projektansicht (GitHub Pages)**  
+Für dieses Proof-of-Concept steht eine web-basierte Ansicht zur Verfügung, die modulare Struktur und die implementierten Building Blocks interaktiv darstellt:
 
 👉 https://etemizab.github.io/ech-schnittstellenstandard/
 
