@@ -312,3 +312,13 @@ Alle Versionen: [v1.0.0](README.md)
 
 ---
 
+
+### 👥 Autoren
+
+🎓 **ZHAW – Zürcher Hochschule für Angewandte Wissenschaften**  
+🏛️ *School of Management and Law (SML)*
+
+- **Oliver Toth**  
+- **Sivanujan Selvarajah**  
+- **Zabit Etemi**
+
