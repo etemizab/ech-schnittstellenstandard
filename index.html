@@ -188,7 +188,7 @@
   <div id="tab_about" class="tab-content active">
     <h2>Was ist eCH-0011?</h2>
     <p>
-      Der eCH-0011-Standard definiert die <b>Datenstruktur für Personendaten</b> gemäß dem Amtlichen Katalog der Merkmale und dem Registerharmonisierungsgesetz (RHG). 
+      Der eCH-0011-Standard definiert die <b>Datenstruktur für Personendaten</b> gemäss dem Amtlichen Katalog der Merkmale und dem Registerharmonisierungsgesetz (RHG). 
       Ziel ist die <b>vereinheitlichte, fehlerfreie und sichere Übermittlung</b> von Personendaten zwischen Behörden, Registern und Fachstellen in der Schweiz.
     </p>
     <ul>
@@ -229,7 +229,7 @@
       <b>Technische Repräsentation:</b> 
       <ul>
         <li>Hauptobjekt <code>person</code></li>
-        <li>Schemadateien <code>eCH-0011-9-0.xsd</code> & <code>eCH-0011-9-0f.xsd</code></li>
+        <li>Schemadateien <code>eCH-0011-9-0.xsd</code> und <code>eCH-0011-9-0f.xsd</code></li>
         <li>Strukturierte Trennung nach Pflichtfeldern und optionalen Angaben</li>
       </ul>
     </p>
@@ -242,14 +242,14 @@
   </div>
 
   <div id="tab_applikation" class="tab-content">
-    <h2>Spring Boot Applikation: Nutzen & Demo</h2>
+    <h2>Spring Boot Applikation: Nutzen und Demo</h2>
     <p>
-      Zum Testen und zur Illustration des Standards haben wir eine kleine <b>Spring Boot Anwendung</b> entwickelt. Im Backend werden anonymisiert Nutzungsdaten gezählt, um zu sehen, wie oft Datenmodelle oder Schemata verwendet und angepasst werden.<br>
-      Die <b>mitgelieferte GUI</b> ermöglicht:
+      Zum Testen und zur Illustration des Standards eCH-0011 haben wir eine <b>Spring Boot Anwendung</b> entwickelt. Im Backend werden anonymisiert Nutzungsdaten erhoben, um zu sehen, wie oft Datenmodelle oder Schemata verwendet und angepasst werden.<br>
+      Die <b>mitgelieferte Benutzeroberfläche</b> ermöglicht:
     </p>
     <ul>
-      <li>Das Bearbeiten und Anpassen von Standardelementen in Echtzeit</li>
-      <li>Die Generierung von unterschiedlichen Versionen/Snapshots als Dokument (Download-Funktion)</li>
+      <li>Das Bearbeiten und Anpassen von Standardelementen gemäss eCH-0011 in Echtzeit</li>
+      <li>Die Generierung von unterschiedlichen Versionen und Snapshots als Dokument (Download-Funktion)</li>
       <li>Direkte Rückmeldung über ein leichtgewichtiges, responsives Interface</li>
     </ul>
     <p>
@@ -261,7 +261,7 @@
   <div id="tab_anleitung" class="tab-content">
     <h2>JSON zu Java: Schritt-für-Schritt Anleitung</h2>
     <p>
-      Diese Anleitung zeigt, wie du Building Block JSON-Schemata aus unserer Spring Boot Anwendung mit <b>Visual Studio Code Extensions</b> automatisch in Java-Klassen umwandelst.
+      Diese Anleitung zeigt, wie du Building Block JSON-Schemata aus unserer Spring Boot Anwendung mit <b>Visual Studio Code Extensions</b> automatisch in Java-Klassen umwandelst. Alle Building Blocks folgen dem eCH-0011 Standard.
     </p>
 
     <h3>Voraussetzungen</h3>
@@ -275,16 +275,21 @@
 
     <div class="step">
       <strong>Schritt 1: Building Blocks aus der Spring Boot App herunterladen</strong><br>
-      Öffne unsere <a href="https://etemizab.github.io/ech-schnittstellenstandard/#" target="_blank">Spring Boot Anwendung</a> und lade die JSON-Dateien deiner gewünschten Building Blocks herunter (z.B. <code>nameData.json</code>, <code>birthData.json</code>).
+      Öffne unsere <a href="https://etemizab.github.io/ech-schnittstellenstandard/#" target="_blank">Spring Boot Anwendung</a> und lade die JSON-Dateien deiner gewünschten Building Blocks herunter (z.B. <code>nameData.json</code>, <code>birthData.json</code>). Diese entsprechen den eCH-0011 Merkmalgruppen.
     </div>
 
     <div class="step">
       <strong>Schritt 2: JSON öffnen und kopieren</strong><br>
       Öffne die heruntergeladene JSON-Datei in einem Text-Editor und kopiere deren Inhalt komplett in die Zwischenablage.
       <div class="code-block"><pre>{
-  "firstName": "string",
-  "lastName": "string",
-  ...
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "NameData",
+  "type": "object",
+  "properties": {
+    "officialFirstName": { "$ref": "#/definitions/Name" },
+    "officialLastName": { "$ref": "#/definitions/Name" }
+  },
+  "required": ["officialFirstName", "officialLastName"]
 }</pre></div>
     </div>
 
@@ -303,42 +308,50 @@
       Erstelle eine neue Datei mit dem Namen deines Building Blocks (z.B. <code>NameData.java</code>) im Paket <code>src/main/java/ch/ech/models</code>.
       <div class="code-block"><pre>src/main/java/
   ├── ch.ech.models/
-      ├── NameData.java (leer, wird jetzt gefüllt)</pre></div>
+      ├── NameData.java (leer, wird jetzt gefüllt)
+      ├── BirthData.java
+      ├── Properties.java
+      └── Name.java</pre></div>
     </div>
 
     <div class="step">
       <strong>Schritt 5: JSON as Code einfügen</strong><br>
       <ol>
         <li>In die leere <code>NameData.java</code> klicken</li>
-        <li><code>Ctrl+Shift+P</code> → "Paste JSON as Code" eingeben</li>
+        <li><code>Ctrl+Shift+P</code> eingeben und "Paste JSON as Code" wählen</li>
         <li>Deine kopierte JSON einfügen</li>
         <li>Zielsprache auf <b>Java</b> setzen</li>
         <li>Klasse als <code>NameData</code> benennen</li>
       </ol>
-      Die Extension generiert automatisch alle Getter/Setter!
+      Die Extension generiert automatisch alle Getter und Setter sowie verschachtelte Klassen für <code>Properties</code> und <code>Name</code>.
     </div>
 
     <div class="step">
       <strong>Schritt 6: Mit anderen Building Blocks kombinieren</strong><br>
       Wiederhole Schritte 1-5 für weitere Building Blocks (z.B. <code>BirthData.java</code>). In deinem Haupt-Modell kannst du sie dann kombinieren:
       <div class="code-block"><pre>public class Person {
-    private NameData nameData;      // Meso-Ebene
-    private BirthData birthData;    // Meso-Ebene
-    // ... weitere Building Blocks
+    private NameData nameData;      // eCH-0011 Merkmalgruppe
+    private BirthData birthData;    // eCH-0011 Merkmalgruppe
+    private String ahvNumber;       // Personenidentifikation
     
     // Getter und Setter
+    public NameData getNameData() { return nameData; }
+    public void setNameData(NameData nameData) { this.nameData = nameData; }
+    
+    public BirthData getBirthData() { return birthData; }
+    public void setBirthData(BirthData birthData) { this.birthData = birthData; }
 }</pre></div>
     </div>
 
     <h3>Fertig!</h3>
     <p>
-      Deine Java-Klassen sind nun automatisch erstellt und können sofort in Spring Boot mit <code>@JsonProperty</code> und <code>jackson</code> deserialisiert werden.
+      Deine Java-Klassen sind nun automatisch erstellt und entsprechen der eCH-0011 Struktur. Sie können sofort in Spring Boot mit <code>@JsonProperty</code> und <code>jackson</code> deserialisiert werden. Alle generierten Klassen sind vollständig und einsatzbereit.
     </p>
   </div>
 
   <div class="footer">
     &copy; 2025 ZHAW School of Management and Law<br>
-    Seite basiert auf offenen eCH-Richtlinien &ndash; <a href="https://www.ech.ch/de/ech/ech-0011/9.0.0" target="_blank">Offizielles Dokument</a>
+    Seite basiert auf offenen eCH-Richtlinien – <a href="https://www.ech.ch/de/ech/ech-0011/9.0.0" target="_blank">Offizielles Dokument</a>
   </div>
   <script>
     function showTab(tab) {
