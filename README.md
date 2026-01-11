@@ -241,13 +241,13 @@ Alle Versionen: [v1.0.0](README.md)
 ---
 
 <a id="3-Repository"></a>
-## 2. Repository · Version: ![v1.0.0](https://img.shields.io/badge/version-1.0.0-blue)
+## 3. Repository · Version: ![v1.0.0](https://img.shields.io/badge/version-1.0.0-blue)
 <a id="3-1-Struktur"></a>
 ### 3.1 Struktur · Version: ![v1.0.0](https://img.shields.io/badge/version-1.0.0-blue)
 
 Die folgende Übersicht zeigt die grundlegende Struktur des Repositories
 und die Organisation der modularen Building Blocks.
-
+'''text
 /
 ├─ README.md
 ├─ building-blocks/
@@ -258,7 +258,8 @@ und die Organisation der modularen Building Blocks.
 │  └─ ...
 ├─ schemas/
 └─ docs/ 
-
+'''
+---
 Alle Versionen: v1.0.0
 
 ---
