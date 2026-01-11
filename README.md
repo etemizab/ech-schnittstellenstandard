@@ -14,7 +14,7 @@ Der Fokus liegt auf:
 
 ---
 
-## Inhalt
+## Inhaltsverzeichnis
 
 - [1 Einleitung](#1-einleitung)
   - [1.1 Status](#1-1-status)
@@ -31,32 +31,6 @@ Der Fokus liegt auf:
 
 ---
 
-## 1 Einleitung
-- [1.1 Status](#1-1-Status)
-- [1.2 Anwendungsgebiet](#1-2-Anwendungsgebiet)
-- [1.3 Abgrenzung](#1-3-Abgrenzung)
-- [1.4 Konventionen](#1-4-Konventionen)
-
-## 2 Datenmodell
-
-- [2.1 Building Blocks](#2-1-building-blocks)
-
-## 3 Repository
-
-- [3.1 Struktur](#3-1-struktur)
-
-## 4 Feedback & Mitarbeit
-
-- [4 Feedback & Mitarbeit](#4-feedback-mitarbeit)
-
-
-## 5 Haftungsausschluss/Hinweise auf Rechte Dritter
-- [5 Haftungsausschluss / Hinweise auf Rechte Dritter](#5-haftungsausschluss)
-
-
-
-## 6 Urheberrechte
-- [6 Urheberrechte](#6-Urheberrechte)
 
 ## Anhänge
 - Referenzen / Bibliografie
