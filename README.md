@@ -28,7 +28,10 @@ Der Fokus liegt auf:
 
 - [3.1 Struktur](#3-1-struktur)
 
-## 4 Sicherheitsüberlegungen
+## 4 Feedback & Mitarbeit
+
+- [4 Feedback & Mitarbeit](#4-feedback-mitarbeit)
+
 
 ## [5 Haftungsausschluss/Hinweise auf Rechte Dritter](#5-Haftungsausschluss)
 
@@ -269,7 +272,7 @@ Alle Versionen: [v1.0.0](README.md)
 
 ---
 <a id="4-Feedback & Mitarbeit"></a>
-## 4. 4-Feedback & Mitarbeit · Version: ![v1.0.0](https://img.shields.io/badge/version-1.0.0-blue)
+## 4. Feedback & Mitarbeit · Version: ![v1.0.0](https://img.shields.io/badge/version-1.0.0-blue)
 <a id="4-1-Feedback & Mitarbeit"></a>
 ### 4-1-Feedback & Mitarbeit · Version: ![v1.0.0](https://img.shields.io/badge/version-1.0.0-blue)
 
