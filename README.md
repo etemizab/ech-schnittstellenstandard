@@ -22,7 +22,7 @@ Der Fokus liegt auf:
 
 ## 2 Datenmodell
 
-- [2.1 Building Blocks](#2-1-Building Blocks)
+- [2.1 Building Blocks](#2-1-building-blocks)
 
 ## 3 Spezifikation
 
@@ -208,7 +208,7 @@ Alle Versionen: [v1.0.0](README.md)
 ---
 <a id="2-Datenmodell"></a>
 ## 2. Datenmodell · Version: ![v1.0.0](https://img.shields.io/badge/version-1.0.0-blue)
-<a id="2-1-Building Blocks"></a>
+<a id="2-1-building-blocks"></a>
 ### 2.1 Building Blocks · Version: ![v1.0.0](https://img.shields.io/badge/version-1.0.0-blue)
 
 Die fachliche Struktur von eCH-0011 wird in **modulare Building Blocks** zerlegt.
