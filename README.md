@@ -24,7 +24,9 @@ Der Fokus liegt auf:
 
 - [2.1 Building Blocks](#2-1-building-blocks)
 
-## 3 Spezifikation
+## 3 Repository
+
+- [3.1 Struktur](#3-1-struktur)
 
 ## 4 Sicherheitsüberlegungen
 
