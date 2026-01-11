@@ -271,10 +271,9 @@ Alle Versionen: [v1.0.0](README.md)
 **Feedback**: [Ankündigungen von eCH](https://github.com/etemizab/ech-schnittstellenstandard/discussions/categories/announcements) ·  [Fehler melden](https://github.com/etemizab/ech-schnittstellenstandard/discussions/categories/q-a) · [Verbesserung vorschlagen](https://github.com/etemizab/ech-schnittstellenstandard/discussions/categories/ideas) · [Alle Diskussionen](https://github.com/etemizab/ech-schnittstellenstandard/discussions)
 
 ---
-<a id="4-Feedback & Mitarbeit"></a>
+<a id="4-feedback-mitarbeit"></a>
 ## 4. Feedback & Mitarbeit · Version: ![v1.0.0](https://img.shields.io/badge/version-1.0.0-blue)
-<a id="4-1-Feedback & Mitarbeit"></a>
-### 4-1-Feedback & Mitarbeit · Version: ![v1.0.0](https://img.shields.io/badge/version-1.0.0-blue)
+
 
 
 Dieses Repository wird offen und kollaborativ weiterentwickelt. Feedback, Fragen und Verbesserungsvorschläge sind ausdrücklich erwünscht und erfolgen über die
